@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio — Alvaro Leonardo Baquero Malagon</title>
+    <meta name="description" content="Portafolio profesional de desarrollo de software: proyectos, experiencia y contacto." />
+    <meta name="theme-color" content="#0b1021" />
+    <meta property="og:title" content="Portafolio — Tu Nombre" />
+    <meta property="og:description" content="Proyectos reales, experiencia y tecnologías. Disponible en modo oscuro." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://picsum.photos/seed/og/1200/630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="./" />
+    <link rel="canonical" href="./" />
+    <link rel="apple-touch-icon" href="https://picsum.photos/192" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alvaro Leonardo Baquero Malagon",
+        "jobTitle": "Desarrollador de Software",
+        "homeLocation": {"@type":"Country","name":"Colombia"},
+        "url": "./",
+        "knowsAbout": ["Backend","Frontend","DevOps"],
+        "sameAs": ["https://github.com/LJprogram657","https://www.linkedin.com/in/leonardo-baquero-a48486290/"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#proyectos">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="#top">Portafolio</a>
+      <nav class="nav">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">
+        <span class="icon">🌗</span>
+      </button>
+    </header>
+
+    <main id="top" class="main">
+      <section class="hero reveal">
+        <div class="card hero-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="https://picsum.photos/seed/avatar/160" alt="Foto de perfil" />
+          </div>
+          <div class="hero-content">
+            <h1>¡Hola! Soy Alvaro Leonardo Baquero Malagon 👋</h1>
+            <p>Desarrollador de software de Colombia, 20 años. Tecnólogo graduado y estudiante de Ingeniería en Desarrollo de Software. Me enfoco en construir soluciones serias y modernas con excelente UX.</p>
+            <div class="badges">
+              <span class="badge">Desarrollo Backend</span>
+              <span class="badge">Desarrollo Frontend</span>
+            </div>
+            <div class="cta">
+              <a class="btn primary" href="#" id="downloadCV">Descargar CV</a>
+            </div>
+            <div class="social">
+              <a class="icon-link" href="https://github.com/LJprogram657" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.26 3.4.96.1-.76.41-1.26.75-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.6.24 2.78.12 3.07.75.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.8 1.08.8 2.18v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg>
+              </a>
+              <a class="icon-link" href="https://www.linkedin.com/in/leonardo-baquero-a48486290/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 8.98h3.96V21H3V8.98Zm7.48 0h3.79v1.64h.05c.53-.99 1.82-2.03 3.75-2.03 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.35c0-1.28-.03-2.93-1.78-2.93-1.78 0-2.05 1.39-2.05 2.84V21h-3.96V8.98Z"></path></svg>
+              </a>
+              <a class="icon-link" href="https://instagram.com/ljprogram657" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm6.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" class="section reveal">
+        <h2>Experiencia</h2>
+        <div class="timeline">
+          <div class="timeline-item card">
+            <div class="item-header">
+              <h3>Desarrollador — Alcaldía de Acacías, Meta</h3>
+              <span class="periodo">2025–Actual</span>
+            </div>
+            <p>Trabajo en soluciones web para la gestión institucional, asegurando rendimiento, accesibilidad y seguridad.</p>
+            <ul class="list">
+              <li>Desarrollo de funcionalidades y mantenimiento de plataformas internas.</li>
+              <li>Optimización de tiempos de carga y buenas prácticas de seguridad.</li>
+              <li>Colaboración con equipos multidisciplinarios.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section reveal">
+        <h2>Proyectos</h2>
+        <div class="projects-toolbar card">
+          <span id="resultsCount">1 proyecto</span>
+          <div class="spacer"></div>
+          <button id="clearFilters" class="btn ghost small">Limpiar filtros</button>
+        </div>
+        <div class="projects">
+          <article class="project card">
+            <img class="project-cover" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.lcgdeportivos.org%2F?w=1000" alt="LCG Deportivos" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <h3>LCG Deportivos</h3>
+              <p>Plataforma para organizar y competir en torneos de fútbol.</p>
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">Vercel</span>
+              </div>
+              <div class="project-cta">
+                <a class="btn small" href="https://www.lcgdeportivos.org/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="projects-empty card" aria-live="polite">
+          <div class="empty-inner">
+            <div class="empty-icon spin">⏳</div>
+            <h3>Aún no he desarrollado una página con esta tecnología</h3>
+            <p>Estoy trabajando en ello. Puedes limpiar filtros o ver otras tecnologías.</p>
+            <button class="btn ghost small btn-clear">Limpiar filtros</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="tecnologias" class="section reveal">
+        <h2>Tecnologías</h2>
+        <div class="tech-grid">
+          <div class="chip" data-filter="Next.js"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy">Next.js</div>
+          <div class="chip" data-filter="Python"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">Python</div>
+          <div class="chip" data-filter="Django"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" loading="lazy">Django</div>
+          <div class="chip" data-filter="SQL"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" loading="lazy">SQL</div>
+          <div class="chip" data-filter="PostgreSQL"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy">PostgreSQL</div>
+          <div class="chip" data-filter="Docker"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy">Docker</div>
+          <div class="chip" data-filter="React"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy">React</div>
+          <div class="chip" data-filter="TypeScript"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy">TypeScript</div>
+          <div class="chip" data-filter="Tailwind"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" loading="lazy">Tailwind</div>
+          <div class="chip" data-filter="Vercel"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" loading="lazy">Vercel</div>
+          <div class="chip" data-filter="Flutter"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy">Flutter</div>
+          <div class="chip" data-filter="Firebase"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" loading="lazy">Firebase</div>
+          <div class="chip" data-filter="Git"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">Git</div>
+          <div class="chip" data-filter="CI/CD"><img class="chip-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="CI/CD" loading="lazy">CI/CD</div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="section reveal">
+        <h2>Sobre mí</h2>
+        <div class="card about-card">
+          <div class="about-grid">
+            <div class="about-info">
+              <h3>Alvaro Leonardo Baquero Malagon</h3>
+              <p>Desarrollador de software colombiano, 20 años. Tecnólogo graduado y estudiante de Ingeniería en Desarrollo de Software. Construyo soluciones modernas y serias, priorizando rendimiento, accesibilidad y una experiencia de usuario pulida.</p>
+              <div class="chips">
+                <span class="chip accent">Tecnólogo en Desarrollo de Software</span>
+                <span class="chip">Ingeniería en curso</span>
+                <span class="chip">Colombia</span>
+              </div>
+              <div class="chips">
+                <span class="chip">Disponible freelance</span>
+              </div>
+              <div class="about-actions">
+                <a class="btn primary" href="#" id="downloadCVAbout">Ver CV</a>
+                <a class="btn ghost" href="https://www.linkedin.com/in/leonardo-baquero-a48486290/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-text">
+                  <strong>Performance</strong>
+                  <span>Tiempo de carga optimizado</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-icon">🧩</div>
+                <div class="stat-text">
+                  <strong>Arquitectura</strong>
+                  <span>Código claro y mantenible</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-icon">🎨</div>
+                <div class="stat-text">
+                  <strong>UX/UI</strong>
+                  <span>Interacciones sutiles y limpias</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-icon">🔒</div>
+                <div class="stat-text">
+                  <strong>Buenas prácticas</strong>
+                  <span>SEO y seguridad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section reveal">
+        <h2>Contacto</h2>
+        <div class="card contact contact-grid">
+          <div class="contact-info">
+            <div class="contact-row">
+              <span>📧</span>
+              <a href="mailto:leobaquero456@gmail.com">leobaquero456@gmail.com</a>
+              <button class="mini-btn" data-copy="leobaquero456@gmail.com">Copiar</button>
+            </div>
+            <div class="contact-row">
+              <span>📍</span>
+              <span>Colombia</span>
+            </div>
+            <div class="contact-row">
+              <span>📞</span>
+              <a href="tel:3107547938">3107547938</a>
+              <button class="mini-btn" data-copy="+57 3107547938">Copiar</button>
+            </div>
+            <div class="chips">
+              <span class="chip accent">Disponible freelance</span>
+              <span class="chip">Español</span>
+              <span class="chip">Respuesta 24–48h</span>
+            </div>
+            <div class="contact-actions">
+              <a class="btn ghost" href="mailto:leobaquero456@gmail.com?subject=%5BPortafolio%5D%20Nuevo%20contacto&body=Hola%20Alvaro%2C%20me%20gustar%C3%ADa%20contactarte." >Email directo</a>
+              <a class="btn" id="whatsBtn" href="https://wa.me/573107547938" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+          <form id="contactForm" class="contact-form" autocomplete="off">
+            <div class="form-row">
+              <input type="text" id="cf-name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-row">
+              <input type="text" id="cf-subject" placeholder="Asunto (ej. Cotización)" />
+            </div>
+            <div class="form-row">
+              <textarea id="cf-message" rows="4" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="contact-actions">
+              <button type="submit" class="btn primary">Enviar por Email</button>
+              <a class="btn ghost" id="whatsPrefill" href="https://wa.me/573107547938" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Alvaro Leonardo Baquero Malagon</span>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
