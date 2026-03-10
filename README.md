@@ -20,7 +20,7 @@ Este repositorio contiene el código fuente de mi portafolio personal, desarroll
 
 1.  Clona este repositorio:
     ```bash
-    git clone https://github.com/TU_USUARIO/portafolioPersonal.git
+    git clone https://github.com/LJprogram657/PortafolioPersonal.git
     ```
 2.  Abre el archivo `index.html` en tu navegador o usa un servidor local:
     ```bash
