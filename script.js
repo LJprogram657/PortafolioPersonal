@@ -55,15 +55,28 @@ if (typewriterEl) {
   setTimeout(typeWriter, 800);
 }
 
-// ─── Reading Progress Bar ─────────────────────────────────────
+// ─── Reading Progress Bar & Header Scroll ─────────────────────
 const readingBar = document.getElementById('readingBar');
-if (readingBar) {
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+  // Reading bar
+  if (readingBar) {
     readingBar.style.width = `${Math.min((scrollTop / docHeight) * 100, 100)}%`;
-  }, { passive: true });
-}
+  }
+
+  // Header floating state
+  if (header) {
+    if (scrollTop > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+}, { passive: true });
 
 // ─── Cursor Glow (desktop only) ───────────────────────────────
 const cursorGlow = document.querySelector('.cursor-glow');
