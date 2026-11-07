@@ -1,14 +1,15 @@
-const VERSION = 'v1.1.0';
+const VERSION = 'v3.1.0';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css',
-  './script.js',
+  './styles.css?v=3.1',
+  './script.js?v=3.1',
+  './offline.html'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(VERSION).then(cache => cache.addAll(ASSETS.concat(['./offline.html'])))
+    caches.open(VERSION).then(cache => cache.addAll(ASSETS)).catch(() => {})
   );
   self.skipWaiting();
 });
@@ -16,39 +17,32 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then(keys => Promise.all(
-      keys.filter(k => k !== VERSION).map(k => caches.delete(k))
+      keys.map(k => caches.delete(k))
     ))
   );
   self.clients.claim();
 });
 
+// Network-first strategy for fresh updates, falling back to cache if offline
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
-  const isHTML = req.headers.get('accept')?.includes('text/html');
-
-  if (isHTML) {
-    event.respondWith(
-      fetch(req).then(res => {
-        const copy = res.clone();
-        caches.open(VERSION).then(cache => cache.put(req, copy)).catch(() => {});
-        return res;
-      }).catch(async () => {
-        const cached = await caches.match(req);
-        return cached || caches.match('./offline.html');
-      })
-    );
-    return;
-  }
 
   event.respondWith(
-    caches.match(req).then(cached => {
-      const fetchPromise = fetch(req).then(res => {
-        const copy = res.clone();
-        caches.open(VERSION).then(cache => cache.put(req, copy)).catch(() => {});
+    fetch(req)
+      .then(res => {
+        if (res.status === 200) {
+          const copy = res.clone();
+          caches.open(VERSION).then(cache => cache.put(req, copy)).catch(() => {});
+        }
         return res;
-      }).catch(() => cached);
-      return cached || fetchPromise;
-    })
+      })
+      .catch(async () => {
+        const cached = await caches.match(req);
+        if (cached) return cached;
+        if (req.headers.get('accept')?.includes('text/html')) {
+          return caches.match('./offline.html');
+        }
+      })
   );
 });
